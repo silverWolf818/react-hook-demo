@@ -8,6 +8,7 @@ import {
 import StateDemo from './pages/StateDemo'
 import EffectDemo from './pages/EffectDemo'
 import EffectDemo1 from './pages/EffectDemo1'
+import CallbackDemo from "./pages/CallbackDemo"
 // import HookDemo from './HookDemo';
 // import User from './User';
 // import ImmerDemo from './ImmerDemo';
@@ -56,6 +57,9 @@ function App() {
                                 <li>
                                     <Link to="/effectDemo1">EffectDemo1</Link>
                                 </li>
+                                <li>
+                                    <Link to="/callbackDemo">CallbackDemo</Link>
+                                </li>
                             </ul>
                         </nav>
                         <Switch>
@@ -67,6 +71,9 @@ function App() {
                             </Route>
                             <Route path="/effectDemo1">
                                 <EffectDemo1 />
+                            </Route>
+                            <Route path="/callbackDemo">
+                                <CallbackDemo />
                             </Route>
                         </Switch>
                     </div>
