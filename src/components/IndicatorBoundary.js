@@ -1,23 +1,23 @@
-import {Boundary} from 'react-suspense-boundary';
+import {Boundary} from 'react-suspense-boundary'
 
 const Loading = () => {
     return (
         <div>loading</div>
-    );
-};
+    )
+}
 
 const Error = ({error}) => {
-    const {message, stack} = error;
+    const {message, stack} = error
     return (
         <>
             <div>Oops! {message}</div>
             <div>Oops! {stack}</div>
         </>
-    );
-};
+    )
+}
 
 const IndicatorBoundary = props => {
-    const {children} = props;
+    const {children} = props
 
     return (
         <Boundary
@@ -26,7 +26,7 @@ const IndicatorBoundary = props => {
         >
             {children}
         </Boundary>
-    );
-};
+    )
+}
 
-export default IndicatorBoundary;
+export default IndicatorBoundary

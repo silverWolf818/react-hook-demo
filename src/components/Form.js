@@ -1,28 +1,33 @@
-import React, {forwardRef, useImperativeHandle} from 'react';
-import useForm from '../hooks/useForm';
+import React, {forwardRef, useImperativeHandle} from 'react'
+import useForm from '../hooks/useForm'
 
 const Form = forwardRef((props, ref) => {
-    const {form} = props;
-    const [formInstance] = useForm(form);
+    const {form, children} = props
+    const [formInstance] = useForm(form)
 
-    useImperativeHandle(ref, () => formInstance);
+    useImperativeHandle(ref, () => formInstance)
 
     formInstance.getInternalHooks({
         confirm: () => {
-            console.log('save');
+            console.log('save')
         },
-        reset: ()=> {
-            console.log('reset');
-        }
-    });
+        reset: () => {
+            console.log('reset')
+        },
+    })
 
     return (
-        <div><input type="text"/></div>
-    );
-});
+        <div>
+            <div><input type="text"/></div>
+            <p>
+                {children}
+            </p>
+        </div>
+    )
+})
 
 export {
-    useForm
-};
+    useForm,
+}
 
-export default Form;
+export default Form

@@ -1,6 +1,6 @@
 import {Suspense} from 'react'
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Link
@@ -9,6 +9,10 @@ import StateDemo from './pages/StateDemo'
 import EffectDemo from './pages/EffectDemo'
 import EffectDemo1 from './pages/EffectDemo1'
 import CallbackDemo from "./pages/CallbackDemo"
+import CallbackDemo1 from './pages/CallbackDemo1'
+import AsyncDemo from './pages/AsyncDemo'
+import ErrorBoundaryDemo from './pages/ErrorBoundaryDemo'
+import BoundaryDemo from './pages/BoundaryDemo'
 // import HookDemo from './HookDemo';
 // import User from './User';
 // import ImmerDemo from './ImmerDemo';
@@ -60,6 +64,18 @@ function App() {
                                 <li>
                                     <Link to="/callbackDemo">CallbackDemo</Link>
                                 </li>
+                                <li>
+                                    <Link to="/callbackDemo1">CallbackDemo1</Link>
+                                </li>
+                                <li>
+                                    <Link to="/asyncDemo">AsyncDemo</Link>
+                                </li>
+                                <li>
+                                    <Link to="/errorBoundaryDemo">ErrorBoundaryDemo</Link>
+                                </li>
+                                <li>
+                                    <Link to="/boundaryDemo">BoundaryDemo</Link>
+                                </li>
                             </ul>
                         </nav>
                         <Switch>
@@ -74,6 +90,18 @@ function App() {
                             </Route>
                             <Route path="/callbackDemo">
                                 <CallbackDemo />
+                            </Route>
+                            <Route path="/callbackDemo1">
+                                <CallbackDemo1 />
+                            </Route>
+                            <Route path="/asyncDemo">
+                                <AsyncDemo />
+                            </Route>
+                            <Route path="/errorBoundaryDemo">
+                                <ErrorBoundaryDemo />
+                            </Route>
+                            <Route path="/boundaryDemo">
+                                <BoundaryDemo />
                             </Route>
                         </Switch>
                     </div>
