@@ -7,8 +7,8 @@ export class FormStore {
         this.callback = {};
     }
 
-    confirm = () => {
-        return this.callback.confirm();
+    confirm = (value) => {
+        return this.callback.confirm(value);
     };
 
     reset = ()=> {

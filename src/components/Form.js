@@ -8,8 +8,8 @@ const Form = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => formInstance)
 
     formInstance.getInternalHooks({
-        confirm: () => {
-            console.log('save')
+        confirm: (value) => {
+            console.log(value)
         },
         reset: () => {
             console.log('reset')
@@ -18,10 +18,7 @@ const Form = forwardRef((props, ref) => {
 
     return (
         <div>
-            <div><input type="text"/></div>
-            <p>
-                {children}
-            </p>
+            {children}
         </div>
     )
 })

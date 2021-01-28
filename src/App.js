@@ -3,111 +3,102 @@ import {
     HashRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
 } from 'react-router-dom'
 import StateDemo from './pages/StateDemo'
 import EffectDemo from './pages/EffectDemo'
 import EffectDemo1 from './pages/EffectDemo1'
-import CallbackDemo from "./pages/CallbackDemo"
+import CallbackDemo from './pages/CallbackDemo'
 import CallbackDemo1 from './pages/CallbackDemo1'
 import AsyncDemo from './pages/AsyncDemo'
 import ErrorBoundaryDemo from './pages/ErrorBoundaryDemo'
 import BoundaryDemo from './pages/BoundaryDemo'
-// import HookDemo from './HookDemo';
-// import User from './User';
-// import ImmerDemo from './ImmerDemo';
-// import Form, {useForm} from './components/Form';
-// import Time from './Time';
-// import Counter from './Counter';
-// import EffectDemo from './EffectDemo';
-// import './services/httpInterceptors';
-// import IndicatorBoundary from './components/IndicatorBoundary';
-// import BoundaryDemo from './BoundaryDemo';
-// const [form] = useForm();
-// console.log(form);
-//
-// const onConfirm = () => {
-//     console.log(form.confirm());
-// };
-//
-// const onReset = () => {
-//     console.log(form.reset());
-// };
-// <EffectDemo />
-// <button onClick={onConfirm}>confirm</button>
-// <button onClick={onReset}>reset</button>
-// <ImmerDemo/>
-// <div>Time</div>
-// <Time />
-// <div>Counter</div>
-// <Counter />
-// <Form form={form}/>
-// <HookDemo />
-// <User/>
+import FormDemo from './pages/FormDemo'
+import HookDemo from './pages/HookDemo'
+import RecoilDemo from './pages/RecoilDemo'
+
 function App() {
     return (
-        <Suspense fallback={<div>loading</div>}>
-            <div className="App">
-                <Router>
-                    <div>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <Link to="/stateDemo">stateDemo</Link>
-                                </li>
-                                <li>
-                                    <Link to="/effectDemo">EffectDemo</Link>
-                                </li>
-                                <li>
-                                    <Link to="/effectDemo1">EffectDemo1</Link>
-                                </li>
-                                <li>
-                                    <Link to="/callbackDemo">CallbackDemo</Link>
-                                </li>
-                                <li>
-                                    <Link to="/callbackDemo1">CallbackDemo1</Link>
-                                </li>
-                                <li>
-                                    <Link to="/asyncDemo">AsyncDemo</Link>
-                                </li>
-                                <li>
-                                    <Link to="/errorBoundaryDemo">ErrorBoundaryDemo</Link>
-                                </li>
-                                <li>
-                                    <Link to="/boundaryDemo">BoundaryDemo</Link>
-                                </li>
-                            </ul>
-                        </nav>
+        <div className="App">
+            <Router>
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="/stateDemo">stateDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/effectDemo">EffectDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/effectDemo1">EffectDemo1</Link>
+                            </li>
+                            <li>
+                                <Link to="/callbackDemo">CallbackDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/callbackDemo1">CallbackDemo1</Link>
+                            </li>
+                            <li>
+                                <Link to="/asyncDemo">AsyncDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/errorBoundaryDemo">ErrorBoundaryDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/boundaryDemo">BoundaryDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/formDemo">FormDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/hookDemo">HookDemo</Link>
+                            </li>
+                            <li>
+                                <Link to="/recoilDemo">RecoilDemo</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                    <Suspense fallback={<div>loading</div>}>
                         <Switch>
                             <Route path="/stateDemo">
-                                <StateDemo />
+                                <StateDemo/>
                             </Route>
                             <Route path="/effectDemo">
-                                <EffectDemo />
+                                <EffectDemo/>
                             </Route>
                             <Route path="/effectDemo1">
-                                <EffectDemo1 />
+                                <EffectDemo1/>
                             </Route>
                             <Route path="/callbackDemo">
-                                <CallbackDemo />
+                                <CallbackDemo/>
                             </Route>
                             <Route path="/callbackDemo1">
-                                <CallbackDemo1 />
+                                <CallbackDemo1/>
                             </Route>
                             <Route path="/asyncDemo">
-                                <AsyncDemo />
+                                <AsyncDemo/>
                             </Route>
                             <Route path="/errorBoundaryDemo">
-                                <ErrorBoundaryDemo />
+                                <ErrorBoundaryDemo/>
                             </Route>
                             <Route path="/boundaryDemo">
-                                <BoundaryDemo />
+                                <BoundaryDemo/>
+                            </Route>
+                            <Route path="/formDemo">
+                                <FormDemo/>
+                            </Route>
+                            <Route path="/hookDemo">
+                                <HookDemo/>
+                            </Route>
+                            <Route path="/recoilDemo">
+                                <RecoilDemo/>
                             </Route>
                         </Switch>
-                    </div>
-                </Router>
-            </div>
-        </Suspense>
+                    </Suspense>
+                </div>
+            </Router>
+        </div>
     )
 }
 

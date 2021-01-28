@@ -4,20 +4,19 @@ import Form, {useForm} from '../components/Form'
 const FormDemo = () => {
     const [form] = useForm()
     const onConfirm = () => {
-        console.log(form.confirm())
+        form.confirm({name:'zzh'})
     }
 
     const onReset = () => {
-        console.log(form.reset())
+        form.reset()
     }
 
     return (
-        <>
-            <Form form={form}>
-                <button onClick={onConfirm}>confirm</button>
-                <button onClick={onReset}>reset</button>
-            </Form>
-        </>
+        <Form form={form}>
+            <div><input type="text"/></div>
+            <button onClick={onConfirm}>confirm</button>
+            <button onClick={onReset}>reset</button>
+        </Form>
     )
 }
 
